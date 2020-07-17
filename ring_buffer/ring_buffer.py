@@ -13,7 +13,6 @@ class RingBuffer:
                 self.current += 1
         else:
             self.arr.append(item)
-            
 
     def get(self):
         return self.arr
