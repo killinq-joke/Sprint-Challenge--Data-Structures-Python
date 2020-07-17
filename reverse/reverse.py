@@ -1,3 +1,4 @@
+import time
 class Node:
     def __init__(self, value=None, next_node=None):
         self.value = value
@@ -54,12 +55,3 @@ class LinkedList:
         else:
             self.head = node
         node.set_next(prev)
-        
-
-
-l = LinkedList()
-l.add_to_head(10)
-l.add_to_head(5)
-l.add_to_head(2)
-l.reverse_list(l.head, None)
-l.display()
