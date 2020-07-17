@@ -38,5 +38,26 @@ class LinkedList:
 
         return False
 
+    def display(self):
+        current = self.head
+        arr = []
+        while current:
+            arr.append(current.value)
+            current = current.get_next()
+        print(arr)
+
     def reverse_list(self, node, prev):
-        pass
+        if node.get_next():
+            self.reverse_list(node.get_next(), node)
+        else:
+            self.head = node
+        node.set_next(prev)
+        
+
+
+l = LinkedList()
+l.add_to_head(10)
+l.add_to_head(5)
+l.add_to_head(2)
+l.reverse_list(l.head, None)
+l.display()

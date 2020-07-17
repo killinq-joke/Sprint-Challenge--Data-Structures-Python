@@ -13,7 +13,6 @@ f.close()
 duplicates = set(names_1) & set(names_2)  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-print()
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
