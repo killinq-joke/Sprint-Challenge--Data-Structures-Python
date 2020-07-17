@@ -17,10 +17,3 @@ class RingBuffer:
 
     def get(self):
         return self.arr
-
-print([1, 2, 3][1])
-
-r = RingBuffer(5)
-for i in range(50):
-    r.append(i)
-r.get()
