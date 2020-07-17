@@ -1,3 +1,4 @@
+import time
 class Node:
     def __init__(self, value=None, next_node=None):
         self.value = value
@@ -38,5 +39,19 @@ class LinkedList:
 
         return False
 
+    def display(self):
+        current = self.head
+        arr = []
+        while current:
+            arr.append(current.value)
+            current = current.get_next()
+        print(arr)
+
     def reverse_list(self, node, prev):
-        pass
+        if not node:
+            return
+        if node.get_next():
+            self.reverse_list(node.get_next(), node)
+        else:
+            self.head = node
+        node.set_next(prev)
